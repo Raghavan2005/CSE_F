@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Planymo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #01c1e8 0%, #0ea5d6 100%);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-30px); }
+        }
+
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .animate-spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .animate-bounce-subtle {
+            animation: bounce-subtle 2s ease-in-out infinite;
+        }
+
+        .delay-1 { animation-delay: 0.2s; opacity: 0; }
+        .delay-2 { animation-delay: 0.4s; opacity: 0; }
+        .delay-3 { animation-delay: 0.6s; opacity: 0; }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #01c1e8 0%, #0ea5d6 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(1, 193, 232, 0.4);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 overflow-hidden">
+    <div class="min-h-screen flex items-center justify-center relative">
+        <!-- Animated background elements -->
+        <div class="absolute top-20 left-10 w-32 h-32 bg-cyan-200 rounded-full filter blur-3xl opacity-30 animate-float"></div>
+        <div class="absolute bottom-20 right-10 w-40 h-40 bg-blue-200 rounded-full filter blur-3xl opacity-30 animate-float" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-cyan-300 rounded-full filter blur-2xl opacity-20 animate-spin-slow"></div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <!-- Logo -->
+            <div class="mb-8 animate-fade-in">
+                <a href="/" class="text-4xl font-bold bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent inline-block">
+                    Planymo
+                </a>
+            </div>
+
+            <!-- Main 404 Content -->
+            <div class="max-w-3xl mx-auto">
+                <!-- 404 Number with floating effect -->
+                <div class="mb-8 animate-float">
+                    <h1 class="text-[180px] md:text-[240px] font-bold leading-none bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 bg-clip-text text-transparent">
+                        404
+                    </h1>
+                </div>
+
+                <!-- Main message -->
+                <div class="animate-fade-in delay-1 mb-6">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                        Oops! You've Gone Off the Map
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Looks like this destination doesn't exist. Let's get you back on track to your perfect journey.
+                    </p>
+                </div>
+
+                <!-- Decorative travel icons -->
+                <div class="flex justify-center gap-6 my-12 animate-fade-in delay-2">
+                    <div class="w-16 h-16 bg-cyan-100 rounded-2xl flex items-center justify-center transform rotate-6 animate-bounce-subtle">
+                        <svg class="w-8 h-8 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center transform -rotate-6 animate-bounce-subtle" style="animation-delay: 0.3s;">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/>
+                        </svg>
+                    </div>
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center transform rotate-6 animate-bounce-subtle" style="animation-delay: 0.6s;">
+                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in delay-3">
+                    <a href="https://planymo.in" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg inline-block">
+                        Back to Home
+                    </a>
+                   
+                </div>
+
+           
+        </div>
+
+        
+    </div>
+</body>
+</html>
